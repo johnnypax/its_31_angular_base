@@ -1,0 +1,47 @@
+<h1>Inserimento</h1>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="form-group">
+            <label for="input-nome">Nome</label>
+            <input type="text" [(ngModel)]="nome" class="form-control" id="input-nome" />
+        </div>
+        
+        <div class="form-group">
+            <label for="input-cognome">Cognome</label>
+            <input type="text" [(ngModel)]="cognome" class="form-control" id="input-cognome" />
+        </div>
+        
+        <div class="form-group">
+            <label for="input-matricola">Matricola</label>
+            <input type="text" [(ngModel)]="matricola" class="form-control" id="input-matricola" />
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        
+        <div class="form-group">
+            <label for="input-data">Data di Nascita</label>
+            <input type="date" [(ngModel)]="data" class="form-control" id="input-data" />
+        </div>
+        
+        <div class="form-group">
+            <label for="input-corso">Corso</label>
+            <select class="form-control" [(ngModel)]="corso" id="input-corso">
+                <option>ITS Informatica</option>
+                <option>ITS Meccatronica</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <button class="btn btn-success w-100 mt-2" (click)="salva()">Salva</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
