@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Inserimento {
 
+  salvataggio(){
+    console.log("Hai cliccato sul pulsante")
+  }
+
 }
