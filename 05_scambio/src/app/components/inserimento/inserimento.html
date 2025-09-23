@@ -2,17 +2,17 @@
 
 <div class="form-group mt-3">
     <label for="input-nome">Nome</label>
-    <input type="text" class="form-control" id="input-nome" />
+    <input type="text" [(ngModel)]="nome" class="form-control" id="input-nome" />
 </div>
 
 <div class="form-group mt-3">
     <label for="input-cognome">Cognome</label>
-    <input type="text" class="form-control" id="input-cognome" />
+    <input type="text" [(ngModel)]="cognome" class="form-control" id="input-cognome" />
 </div>
 
 <div class="form-group mt-3">
     <label for="input-eta">Età</label>
-    <input type="text" class="form-control" id="input-eta" />
+    <input type="text" [(ngModel)]="eta" class="form-control" id="input-eta" />
 </div>
 
 <button type="button" class="btn btn-success mt-3" (click)="salvataggio()">Salva</button>
