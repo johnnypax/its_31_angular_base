@@ -1,0 +1,16 @@
+<h1>Inserimento</h1>
+
+<div class="form-group">
+    <label for="input-todo">Cosa da fare:</label>
+    <textarea class="form-control" [(ngModel)]="dafare" id="input-todo"></textarea>
+</div>
+
+<button type="button" class="btn btn-success mt-2" (click)="salvataggio()">Salva</button>
+
+<hr />
+
+<ul>
+    <li *ngFor="let todo of elenco">
+        {{todo}}
+    </li>
+</ul>
