@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Età</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of elenco">
+            <td>{{p.nome}}</td>
+            <td>{{p.cognome}}</td>
+            <td>{{p.eta}}</td>
+        </tr>
+    </tbody>
+</table>
