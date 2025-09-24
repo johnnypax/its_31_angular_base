@@ -45,3 +45,26 @@
     <div class="col-md-4"></div>
 </div>
 
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Matricola</th>
+            <th>Data Nascita</th>
+            <th>Corso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let studente of elenco">
+            <td>{{studente.nome}}</td>
+            <td>{{studente.cognome}}</td>
+            <td>{{studente.matricola}}</td>
+            <td>{{studente.data_nas}}</td>
+            <td>{{studente.corso}}</td>
+        </tr>
+    </tbody>
+</table>
+

@@ -35,7 +35,6 @@ export class Gestione {
     this.matricola = "";
     this.data = "";
     this.corso = "";
-
   }
 
 }

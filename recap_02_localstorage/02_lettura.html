@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sono lettura, apri console</h1>
+    <span id="nominativo"></span>
+
+    <script>
+        let nom = localStorage.getItem("nominativo")
+
+        document.getElementById("nominativo").innerText = nom;
+    </script>
+</body>
+</html>
