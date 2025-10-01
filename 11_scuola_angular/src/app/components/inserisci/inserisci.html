@@ -1,0 +1,32 @@
+<h1>Inserisci studente</h1>
+
+<div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" [(ngModel)]="nom" class="form-control" id="nome" name="nome" required>
+</div>
+
+<div class="mb-3">
+    <label for="cognome" class="form-label">Cognome</label>
+    <input type="text" [(ngModel)]="cog" class="form-control" id="cognome" name="cognome" required>
+</div>
+
+<div class="mb-3">
+    <label for="matricola" class="form-label">Matricola</label>
+    <input type="text" [(ngModel)]="mat" class="form-control" id="matricola" name="matricola" required>
+</div>
+
+<div class="mb-3">
+    <label for="dataNascita" class="form-label">Data di nascita</label>
+    <input type="date" [(ngModel)]="dat" class="form-control" id="dataNascita" name="dataNascita" required>
+</div>
+
+<div class="mb-3">
+    <label for="corso" class="form-label">Tipologia di corso</label>
+    <select class="form-select" [(ngModel)]="cor" id="corso" name="corso" required>
+        <option value="">Seleziona...</option>
+        <option>ITS Informatica</option>
+        <option>ITS Meccatronica</option>
+    </select>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="salva()">Invia</button>

@@ -1,8 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Studente = require('./studente.model');
+const cors = require('cors');                 //Importo le CORS
 
 const app = express();
+
+app.use(cors());                              //Utilizzo le CORS
+app.use(cors({
+  origin: 'http://localhost:4200'             //ABILITO LA 4200
+}));
 const port = 3000;
 
 app.use(bodyParser.json());

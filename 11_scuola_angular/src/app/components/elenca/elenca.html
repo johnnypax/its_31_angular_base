@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Matricola</th>
+            <th>Data Nascita</th>
+            <th>Corso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of elenco">
+            <td>{{ s.nome }}</td>
+            <td>{{ s.cognome }}</td>
+            <td>{{ s.matricola }}</td>
+            <td>{{ s.data_nas }}</td>
+            <td>{{ s.corso }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="elimina(s.matricola)">Elimina</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
