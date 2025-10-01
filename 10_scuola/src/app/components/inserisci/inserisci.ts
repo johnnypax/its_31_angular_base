@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Studente } from '../../classes/studente';
+import { StudenteService } from '../../services/studente-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inserisci',
@@ -16,6 +18,10 @@ export class Inserisci {
   mat?: string;
   cor?: string;
 
+  constructor(private service: StudenteService, private router: Router){
+
+  }
+
   salva(): void{
     let stud = new Studente();
     stud.nome = this.nom;
@@ -24,7 +30,23 @@ export class Inserisci {
     stud.matricola = this.mat;
     stud.corso = this.cor;
 
-    console.log(stud)
+    // console.log(stud)
+    if(this.service.inserisci(stud)){
+      alert("STAPPOOOOOO")
+
+      this.nom = "";
+      this.cog = "";
+      this.dat = "";
+      this.mat = "";
+      this.cor = "";
+
+      this.router.navigateByUrl("elenca")
+    }
+    else{
+      alert("ERRORE")
+    }
+    //Service
+    //INserisci nel service
 
   }
 
