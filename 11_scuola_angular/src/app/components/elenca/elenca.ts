@@ -22,8 +22,10 @@ export class Elenca {
   }
 
   aggiorna(){
-    this.elenco = this.service.recupera();
-    console.log(this.elenco);
+    this.service.recupera().then((lista: Studente[]) => {
+      console.log(lista)
+      this.elenco = lista;
+    })
   }
 
   elimina(matr?: String): void{

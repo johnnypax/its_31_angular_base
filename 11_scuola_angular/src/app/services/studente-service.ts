@@ -13,9 +13,9 @@ export class StudenteService {
 
   async recupera(): Promise<Studente[]>{
     let risultato = await fetch("http://localhost:3000/studenti");
-    console.log(risultato)
+    let dati: Studente[] = await risultato.json();
 
-    return [];
+    return dati;
   }
 
   elimina(matr: String): boolean{
