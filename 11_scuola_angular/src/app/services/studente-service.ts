@@ -8,6 +8,17 @@ export class StudenteService {
 
 
   inserisci(stu: Studente): boolean{
+
+    let risultato = fetch("http://localhost:3000/studenti", {
+      method: "POST",
+      body: JSON.stringify(stu),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+
+    //...
+
     return false;
   }
 
