@@ -17,6 +17,7 @@
             <td>{{ s.corso }}</td>
             <td>
                 <button type="button" class="btn btn-danger" (click)="elimina(s.matricola)">Elimina</button>
+                <a href="dettaglio/{{ s.matricola }}" class="btn btn-warning">Mod.</a>
             </td>
         </tr>
     </tbody>

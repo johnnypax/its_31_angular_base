@@ -30,23 +30,21 @@ export class Inserisci {
     stud.matricola = this.mat;
     stud.corso = this.cor;
 
-    // console.log(stud)
-    if(this.service.inserisci(stud)){
-      alert("STAPPOOOOOO")
+    this.service.inserisci(stud)
+    .then(riu => {
+      if(riu){
+        alert("STAPPOOOOO")
+        this.router.navigateByUrl("elenca")
+      }
+        
+      else
+        alert("ERRORE INSERIMENTO")
+    })
+    .catch(e => {
+      alert("Errore di comunicazione API");
+      console.log(e)
+    })
 
-      this.nom = "";
-      this.cog = "";
-      this.dat = "";
-      this.mat = "";
-      this.cor = "";
-
-      this.router.navigateByUrl("elenca")
-    }
-    else{
-      alert("ERRORE")
-    }
-    //Service
-    //INserisci nel service
 
   }
 

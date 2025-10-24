@@ -7,9 +7,9 @@ import { Studente } from '../classes/studente';
 export class StudenteService {
 
 
-  inserisci(stu: Studente): boolean{
+  async inserisci(stu: Studente): Promise<boolean>{
 
-    let risultato = fetch("http://localhost:3000/studenti", {
+    let risultato = await fetch("http://localhost:3000/studenti", {
       method: "POST",
       body: JSON.stringify(stu),
       headers: {
@@ -17,7 +17,8 @@ export class StudenteService {
       }
     })
 
-    //...
+    if(risultato.ok)
+      return true;
 
     return false;
   }
