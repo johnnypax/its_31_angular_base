@@ -1,1 +1,36 @@
-<p>dettaglio works!</p>
+<div *ngIf="studenteTrovato">
+    <h1>Modifica studente</h1>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" [(ngModel)]="nom" class="form-control" id="nome" name="nome" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cognome" class="form-label">Cognome</label>
+        <input type="text" [(ngModel)]="cog" class="form-control" id="cognome" name="cognome" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="dataNascita" class="form-label">Data di nascita</label>
+        <input type="date" [(ngModel)]="dat" class="form-control" id="dataNascita" name="dataNascita" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="corso" class="form-label">Tipologia di corso</label>
+        <select class="form-select" [(ngModel)]="cor" id="corso" name="corso" required>
+            <option value="">Seleziona...</option>
+            <option>ITS Informatica</option>
+            <option>ITS Meccatronica</option>
+        </select>
+    </div>
+
+    <a href="javascript: history.back()" class="btn btn-info">Back</a>
+    <button type="button" class="btn btn-primary" (click)="modifica()">Effettua Modifica</button>
+</div>
+
+<div *ngIf="!studenteTrovato">
+    <div class="alert alert-danger" role="alert">
+        Studente non trovato
+    </div>
+</div>

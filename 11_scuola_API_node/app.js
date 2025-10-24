@@ -58,6 +58,25 @@ app.delete('/studenti/:matricola', (req, res) => {
   res.json(rimosso);
 });
 
+// PUT - Aggiorna uno studente per matricola
+app.put('/studenti/:matricola', (req, res) => {
+  const { nome, cognome, data_nas, corso } = req.body;
+  const studente = studenti.find(s => s.matricola === req.params.matricola);
+
+  if (!studente) {
+    return res.status(404).json({ error: 'Studente non trovato' });
+  }
+
+  // Aggiorna solo i campi forniti nel body
+  if (nome !== undefined) studente.nome = nome;
+  if (cognome !== undefined) studente.cognome = cognome;
+  if (data_nas !== undefined) studente.data_nas = data_nas;
+  if (corso !== undefined) studente.corso = corso;
+
+  res.json(studente);
+});
+
+
 app.listen(port, () => {
   console.log(`✅ Server avviato su http://localhost:${port}`);
 });
